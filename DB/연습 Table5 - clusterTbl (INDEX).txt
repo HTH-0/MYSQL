@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS `clusterTBL`;
+CREATE TABLE IF NOT EXISTS `clusterTBL`(
+`userID` CHAR(8),
+`name` VARCHAR(10),
+`addr` char(2)
+);
+
+INSERT INTO clusterTBL VALUES('LSG','이승기','서울');
+INSERT INTO clusterTBL VALUES('KBS','김범수','경남');
+INSERT INTO clusterTBL VALUES('KKH','김경호','전남');
+INSERT INTO clusterTBL VALUES('JYP','조용필','경기');
+INSERT INTO clusterTBL VALUES('SSK','성시경','서울');
+INSERT INTO clusterTBL VALUES('LJB','임재범','서울');
+INSERT INTO clusterTBL VALUES('YJS','윤종신','경남');
+INSERT INTO clusterTBL VALUES('EJW','은지원','경북');
+INSERT INTO clusterTBL VALUES('JKW','조관우','경기');
+INSERT INTO clusterTBL VALUES('BBK','바비킴','서울');

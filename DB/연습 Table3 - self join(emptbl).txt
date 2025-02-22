@@ -1,0 +1,11 @@
+create table emptbl(emp char(3), manager char(3), empTel varchar(8));
+insert into emptbl values('나사장',null,'0000');
+insert into emptbl values('김재무','나사장','1111');
+insert into emptbl values('김부장','김재무','2222');
+insert into emptbl values('이부장','김재무','3333');
+insert into emptbl values('우대리','이부장','4444');
+insert into emptbl values('이영업','나사장','5555');
+insert into emptbl values('한과장','이영업','6666');
+insert into emptbl values('최정보','나사장','7777');
+insert into emptbl values('윤차장','최정보','8888');
+insert into emptbl values('이주임','윤차장','9999');

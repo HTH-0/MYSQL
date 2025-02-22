@@ -1,0 +1,31 @@
+CREATE DATABASE moiveDB;
+USE moiveDB;
+CREATE TABLE movietbl(
+movie_id int,
+movie_title VARCHAR(30),
+movie_director VARCHAR(20),
+movie_star VARCHAR(20),
+movie_script LONGTEXT,
+movie_film LONGBLOB,
+movie_zip LONGBLOB)
+DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO movietbl VALUES(1, '쇼생크탈출', '프랭크다라본트', '팀 로빈스',
+LOAD_FILE('C:/Movies/Shawshank.txt'),
+LOAD_FILE('C:/Movies/Shawshank.mp4'),
+LOAD_FILE('C:/Movies/Shawshank.zip'));
+
+SHOW VARIABLES LIKE 'max_allowed_packet';
+SHOW VARIABLES LIKE 'secure_file_priv';
+
+SELECT * FROM movietbl;
+
+SELECT `movie_script` FROM movietbl WHERE movie_id = 1
+INTO OUTFILE 'C:/Movies/Shawshank.txt'
+LINES TERMINATED BY '\\n';
+
+SELECT `movie_film` FROM movietbl WHERE movie_id = 1
+INTO DUMPFILE 'C:/Movies/Shawshank.mp4';
+
+SELECT `movie_zip` FROM movietbl WHERE movie_id = 1
+INTO DUMPFILE 'C:/Movies/Shawshank.zip';
